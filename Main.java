@@ -27,5 +27,19 @@ public class Main {
             aIter.add(bIter.next());
         }
         System.out.println(a);
+
+        bIter=b.iterator();
+        while(bIter.hasNext()){
+            bIter.next();
+            if(bIter.hasNext()){
+                bIter.next();
+                bIter.remove();
+            }
+        }
+        System.out.println(b);
+
+        a.removeAll(b);
+        System.out.println(a);
     }
+
 }
